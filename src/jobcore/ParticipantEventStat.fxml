@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="filsdash" prefHeight="731.0" prefWidth="1380.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jobcore.ParticipantEventStatController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="721.0" prefWidth="1372.0" style="-fx-background-color: #02030A;">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="722.0" prefWidth="256.0" style="-fx-background-color: #05071F;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="73.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Assets/guitoun%20logo.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="50.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/logo.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane prefHeight="433.0" prefWidth="256.0">
+                     <children>
+                        <Pane layoutX="29.0" layoutY="32.0" prefHeight="315.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="eventuser" layoutX="1.0" layoutY="79.0" mnemonicParsing="false" onAction="#BouttonAdmin" prefHeight="48.0" prefWidth="176.0" text="Retour" />
+                              <ImageView fitHeight="40.0" fitWidth="33.0" layoutX="-2.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Assets/icons8-male-user-50.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="62.0" fitWidth="33.0" layoutX="1.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Assets/icons8-news-16.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <StackPane layoutX="258.0" prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: #02030A;">
+               <children>
+                  <Pane fx:id="pnlOverview" prefHeight="554.0" prefWidth="793.0">
+                     <children>
+                        <ImageView fitHeight="24.0" fitWidth="25.0" layoutX="677.0" layoutY="516.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Assets/icons8-delete-64.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" layoutX="51.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des evenements" wrappingWidth="321.13671875">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="32.0" fitWidth="33.0" layoutX="301.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Assets/icons8-insert-page-50.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="48.0" fitWidth="33.0" layoutX="179.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Assets/icons8-update-48.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="tfid" layoutX="24.0" layoutY="84.0" prefHeight="32.0" prefWidth="369.0" promptText="id" visible="false" />
+                        <BarChart fx:id="chart" layoutX="14.0" layoutY="92.0" legendVisible="false" prefHeight="457.0" prefWidth="1062.0" style="-fx-background-color: white;" title="Nombre de participants">
+                          <xAxis>
+                            <CategoryAxis fx:id="CategoryAxis" label="Nom de l'evenement" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="NumberAxis" autoRanging="false" label="Nombre de participants" side="LEFT" style="nizar: white;" upperBound="50.0" />
+                          </yAxis>
+                        </BarChart>
+                        <Label layoutX="14.0" layoutY="568.0" text="Selectionner les evenments entre deux dates :" textFill="WHITE" />
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+            <DatePicker fx:id="datedebut" layoutX="272.0" layoutY="597.0" promptText="date debut" />
+            <DatePicker fx:id="datefin" layoutX="510.0" layoutY="597.0" promptText="date fin" />
+            <Button fx:id="go" layoutX="740.0" layoutY="597.0" mnemonicParsing="false" onAction="#counteventbydate" text="chercher" />
+            <Button fx:id="go1" layoutX="1183.0" layoutY="597.0" mnemonicParsing="false" onAction="#countevent" text="Tout les evenements" />
+         </children>
+         <effect>
+            <DropShadow color="#1b1eeb" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>
