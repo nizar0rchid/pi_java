@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="582.0" prefWidth="1138.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AjouterOffreController">
+   <children>
+      <ImageView fitHeight="590.0" fitWidth="1165.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Img/7cbe1fd33a8610612435061156cf960a057b534b_negocier_gap_salarial-1140.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tvoffre" layoutX="356.0" layoutY="106.0" onMouseClicked="#handleMouseButton" prefHeight="474.0" prefWidth="768.0" style="-fx-border-color: #0598ff;">
+        <columns>
+          <TableColumn fx:id="colnomentreprise" prefWidth="89.0" text="NomEntraprise" />
+            <TableColumn fx:id="colsalaire" prefWidth="46.0" text="Salaire" />
+            <TableColumn fx:id="coldescription" prefWidth="71.0" text="Description" />
+            <TableColumn fx:id="collocalisation" prefWidth="72.0" text="Localisation" />
+            <TableColumn fx:id="colnbrheure" prefWidth="65.0" text="Nbr Heure" />
+            <TableColumn fx:id="colcontrat" prefWidth="66.0" text="Contrat" />
+            <TableColumn fx:id="colniveauetude" prefWidth="47.0" text="Niv Etude" />
+            <TableColumn fx:id="colexperience" prefWidth="63.0" text="Experience" />
+            <TableColumn fx:id="collangue" prefWidth="55.0" text="Langue" />
+            <TableColumn fx:id="coldate" prefWidth="66.0" text="Date Expiration" />
+            <TableColumn fx:id="coltel" minWidth="0.0" prefWidth="40.0" text="Tel" />
+            <TableColumn fx:id="colemail" prefWidth="86.0" text="Email" />
+        </columns>
+      </TableView>
+      <Label layoutX="39.0" layoutY="135.0" text="Salaire" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="39.0" layoutY="161.0" text="Description" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="36.0" layoutY="230.0" text="Adresse" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="36.0" layoutY="260.0" text="Nbr Heure" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="37.0" layoutY="318.0" text="Contrat" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="36.0" layoutY="290.0" text="Experience" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="35.0" layoutY="347.0" text="Niveau Etude" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="37.0" layoutY="380.0" text="Langue" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="37.0" layoutY="412.0" text="Tel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="36.0" layoutY="444.0" text="Email" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="35.0" layoutY="476.0" text="Date d'expiration" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txtsalaire" layoutX="148.0" layoutY="131.0" promptText="Salaire" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <TextField fx:id="txtdescription" layoutX="148.0" layoutY="168.0" prefHeight="53.0" prefWidth="149.0" promptText="Descri..." style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <TextField fx:id="txtlocalisation" layoutX="148.0" layoutY="226.0" promptText="Adresse" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <TextField fx:id="txtnbrheure" layoutX="148.0" layoutY="256.0" promptText="Nbr..." style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <TextField fx:id="txtexperience" layoutX="148.0" layoutY="286.0" promptText="Experie..." style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <TextField fx:id="txtnivetude" layoutX="148.0" layoutY="343.0" promptText="Niv..." style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <TextField fx:id="txtlangue" layoutX="148.0" layoutY="375.0" promptText="Langue" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <TextField fx:id="txttel" layoutX="148.0" layoutY="406.0" promptText="+216" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <TextField fx:id="txtemail" layoutX="148.0" layoutY="438.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <DatePicker fx:id="datepicker" layoutX="147.0" layoutY="470.0" prefHeight="25.0" prefWidth="149.0" promptText="Date" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <Label layoutX="56.0" layoutY="34.0" text="Gestion des offres :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnajout" layoutX="30.0" layoutY="521.0" mnemonicParsing="false" onAction="#addOffre" prefHeight="38.0" prefWidth="76.0" style="-fx-background-color: #0598ff;" text="Ajouter" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnmodifier" layoutX="122.0" layoutY="521.0" mnemonicParsing="false" onAction="#updateOffre" prefHeight="38.0" prefWidth="76.0" style="-fx-background-color: #0598ff;" text="Modifier" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnsupprimer" layoutX="218.0" layoutY="521.0" mnemonicParsing="false" onAction="#deleteOffre" prefHeight="38.0" prefWidth="89.0" style="-fx-background-color: #0598ff;" text="Supprimer" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Button>
+      <TextField fx:id="txtcontrat" layoutX="147.0" layoutY="314.0" promptText="Contrat" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <TextField fx:id="search" layoutX="600.0" layoutY="59.0" promptText="Search..." style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <ImageView fx:id="emailCheckMark" fitHeight="25.0" fitWidth="29.0" layoutX="307.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="telCheckMark" fitHeight="25.0" fitWidth="29.0" layoutX="307.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="dateCheckMark" fitHeight="25.0" fitWidth="29.0" layoutX="307.0" layoutY="472.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="langueCheckMark" fitHeight="25.0" fitWidth="29.0" layoutX="307.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="contratCheckMark" fitHeight="25.0" fitWidth="29.0" layoutX="307.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="expCheckMark" fitHeight="25.0" fitWidth="29.0" layoutX="307.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="heureCheckMark" fitHeight="25.0" fitWidth="29.0" layoutX="307.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="localCheckMark" fitHeight="25.0" fitWidth="29.0" layoutX="307.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="descCheckMark" fitHeight="25.0" fitWidth="29.0" layoutX="307.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="salaireCheckMark" fitHeight="25.0" fitWidth="29.0" layoutX="307.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="nomCheckMark" fitHeight="25.0" fitWidth="29.0" layoutX="307.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btnstat" layoutX="356.0" layoutY="74.0" mnemonicParsing="false" onMouseClicked="#stat" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #0598ff;" text="Statistique" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="id_projet" layoutX="148.0" layoutY="100.0" prefWidth="150.0" />
+      <Label layoutX="39.0" layoutY="73.0" text="Nom Entreprise" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtnomentreprise" layoutX="148.0" layoutY="68.0" promptText="Nom..." style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <Label layoutX="40.0" layoutY="105.0" text="Categorie" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

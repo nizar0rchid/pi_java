@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="420.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AjouterAffectationController">
+   <children>
+      <ImageView fitHeight="594.0" fitWidth="1148.0" layoutX="-1.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Img/7cbe1fd33a8610612435061156cf960a057b534b_negocier_gap_salarial-1140.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtidoffre" layoutX="129.0" layoutY="129.0" promptText="ID..." style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <Button fx:id="btnPostuler" layoutX="282.0" layoutY="128.0" mnemonicParsing="false" onAction="#addAffectation" style="-fx-background-color: #0598ff;" text="Postuler" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="66.0" layoutY="134.0" text="Id Offre" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tvAffectation" layoutX="106.0" layoutY="192.0" prefHeight="234.0" prefWidth="177.0" style="-fx-border-color: #0598ff;">
+        <columns>
+          <TableColumn fx:id="colidoffre" prefWidth="87.0" text="ID Offre" />
+          <TableColumn fx:id="coliduser" prefWidth="89.0" text="ID User" />
+        </columns>
+      </TableView>
+      <Label layoutX="66.0" layoutY="52.0" text="Postulation :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tvoffre" layoutX="365.0" layoutY="92.0" prefHeight="474.0" prefWidth="768.0" style="-fx-border-color: #0598ff;">
+         <columns>
+            <TableColumn fx:id="colid" prefWidth="22.0" text="ID" />
+            <TableColumn fx:id="colnomentreprise" prefWidth="89.0" text="NomEntraprise" />
+            <TableColumn fx:id="colsalaire" prefWidth="46.0" text="Salaire" />
+            <TableColumn fx:id="coldescription" prefWidth="71.0" text="Description" />
+            <TableColumn fx:id="collocalisation" prefWidth="72.0" text="Localisation" />
+            <TableColumn fx:id="colnbrheure" prefWidth="65.0" text="Nbr Heure" />
+            <TableColumn fx:id="colcontrat" prefWidth="66.0" text="Contrat" />
+            <TableColumn fx:id="colniveauetude" prefWidth="47.0" text="Niv Etude" />
+            <TableColumn fx:id="colexperience" prefWidth="63.0" text="Experience" />
+            <TableColumn fx:id="collangue" prefWidth="55.0" text="Langue" />
+            <TableColumn fx:id="coldate" prefWidth="66.0" text="Date Expiration" />
+            <TableColumn fx:id="coltel" minWidth="0.0" prefWidth="31.0" text="Tel" />
+            <TableColumn fx:id="colemail" prefWidth="74.0" text="Email" />
+         </columns>
+      </TableView>
+      <TextField fx:id="search" layoutX="574.0" layoutY="59.0" promptText="Search..." style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+   </children>
+</AnchorPane>
