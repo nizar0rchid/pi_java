@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="packagecontroller.HomeController">
+   <children>
+      <ScrollPane layoutY="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
+         <content>
+            <FlowPane fx:id="fp" alignment="CENTER" columnHalignment="CENTER" hgap="50.0" maxHeight="-Infinity" prefHeight="282.0" prefWidth="710.0" vgap="50.0" />
+         </content>
+      </ScrollPane>
+      <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="150.0" layoutY="39.0" prefHeight="40.0" prefWidth="470.0" text="Consult Our Course" textFill="#6d5ce1">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="search" layoutX="473.0" layoutY="95.0" onAction="#search" prefHeight="34.0" prefWidth="182.0" promptText="Search" AnchorPane.rightAnchor="100.0" />
+      <ImageView fitHeight="103.0" fitWidth="106.0" layoutX="7.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/initial-monogram-letter-px-logo-design-vector-template-px-letter-logo-design-2B079M0.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="171.0" layoutY="75.0" prefHeight="40.0" prefWidth="470.0" text="Master your camera and go from beginner to pro level" textFill="#db0f21">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

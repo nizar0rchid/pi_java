@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="637.0" prefWidth="1009.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="insc.AnnonceFrontController">
+   <children>
+      <Label fx:id="text" layoutX="326.0" layoutY="37.0" prefHeight="49.0" prefWidth="407.0" text="Inscription Aux  Cours " textFill="#101c9a">
+         <font>
+            <Font name="Bauhaus 93" size="33.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="178.0" layoutY="73.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="537.0" prefWidth="802.0">
+         <content>
+            <VBox fx:id="liste_annonce" prefHeight="0.0" prefWidth="779.0" />
+         </content></ScrollPane>
+   </children>
+</AnchorPane>
